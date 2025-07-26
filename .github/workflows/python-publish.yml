@@ -84,3 +84,9 @@ jobs:
     - name: Run python louie.py --debug
       run: |
         python louie.py --debug --chrome --xvfb --screenshot
+            - name: Upload screenshots
+      uses: actions/upload-artifact@v4
+      with:
+        name: seleniumbase-screenshots
+        path: |
+          ./latest_logs/
